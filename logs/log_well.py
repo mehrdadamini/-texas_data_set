@@ -2,7 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-def makeplot(well, top_depth, bottom_depth):
+def log_well(well, top_depth, bottom_depth):
+    well.sort_values("Depth")
     lithology_numbers = {1 : {'lith':'S.S.' ,'lith_num':1 , 'hatch':'..' , 'color':'#ffff00' },
                      2 : {'lith':'CoarseSiltstone' ,'lith_num':2 , 'hatch':'-.' , 'color':'#B03A2E' },
                      3 : {'lith':'Fine Siltstone' ,'lith_num':3 , 'hatch':'-..' , 'color':'#784212' },
